@@ -523,212 +523,214 @@
   font-size: 0.9rem;
 }
 
-/*==========BROWSE LISTINGS==========*/
-
+/*==========BROWSE LISTINGS==========111111*/
 /* MAIN CONTENT WRAPPER */
-.page-content {
-  position: relative;
-  z-index: 1;
-  padding: 30px 24px 60px 24px; /* top space below header, bottom space above footer */
-  max-width: 1200px;
-  margin: 0 auto;
+/* --- 1. Basic Reset & Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes padding not affect width */
 }
 
-/* PAGE HEADINGS */
-.head {
-  color: #581515;
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 4px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    /* Background Image setup */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/Background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.sub-head {
-  color: #780606;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-bottom: 20px;
+/* --- 2. Navigation Bar --- */
+.nav-container {
+    background-color: #e4b313;
+    padding: 10px 5%;
+    position: sticky; /* Stays at the top when you scroll */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-h2 {
-  color: #150101;
-  margin: 30px 0 14px 0;
-  font-size: 1.4rem;
-  border-left: none;
-  padding-left: 0;
-}
-
-/* NAVIGATION TABS */
 .navig {
-  list-style-type: none;
-  border: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px 16px;
-  gap: 10px;
-  margin: 0 0 10px 0;
-  background-color: rgb(205, 90, 7);
-  border-radius: 8px;
-  overflow: visible;
-  align-items: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.navig li a {
-  color: #000;
-  text-decoration: none;
-  padding: 6px 14px;
-  border-radius: 50px;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
-  font-size: 0.9rem;
+.navig a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.navig li a:hover {
-  background-color: rgb(128, 68, 68);
-  color: #fff;
+.navig a:hover {
+    color: #00796B; /* Teal color on hover */
 }
 
-.navig label {
-  color: #000;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-right: 4px;
+/* Styling the Filter Dropdown */
+#Filter {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
-.navig select {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid #999;
-  font-size: 0.9rem;
-  background-color: #fff;
-  color: #000;
+/* --- 3. Headers --- */
+.hero-section1 {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
 }
 
-/* LISTINGS CONTAINER */
-.listings-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.section-title {
+    color: white;
+    margin: 40px 5% 20px;
+    border-left: 5px solid #ffcc00; /* Gold accent line */
+    padding-left: 15px;
 }
 
-/* PROPERTY CARD */
+/* --- 4. The Grid (4 columns) --- */
+.listings-grid {
+    display: grid;
+    /* This creates 4 equal columns on big screens */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- 5. Property Card Styling --- */
 .property-card {
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 31%; /* fits 3 per row with gap */
-  min-width: 260px; /* prevents squishing on small screens */
-  max-width: 340px;
-  background-color: white;
-  transition:
-    transform 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column; /* so button stays at bottom */
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
 }
 
+/* Hover effect for the whole card */
 .property-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-/* --- Image --- */
-.image-placeholder img {
-  width: 100%;
-  height: 200px;
-  display: block;
-  object-fit: cover;
+/* --- 6. Image & Zoom Animation --- */
+.image-box {
+    position: relative;
+    overflow: hidden; /* Clips the image when it zooms */
+    height: 200px;
 }
 
-/* --- Content --- */
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover .image-box img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Price Badge on top of image */
+.price-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #00796B;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* --- 7. Content & Buttons --- */
 .content-container {
-  padding: 16px;
-  flex: 1; /* fills remaining space */
-  display: flex;
-  flex-direction: column;
-}
-
-/* --- Title & Price --- */
-.title-price-group {
-  display: flex;
-  flex-direction: column; /* stack title above price on narrow cards */
-  gap: 4px;
-  margin-bottom: 10px;
+    padding: 20px;
+    flex-grow: 1; /* Ensures buttons align even if text is short */
+    display: flex;
+    flex-direction: column;
 }
 
 .property-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #222;
 }
 
-.property-price {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #00796b;
-}
-
-/* --- Description --- */
 .property-description {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  flex: 1;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
-.AM {
-  color: #333;
-  margin-top: 10px;
-  margin-bottom: 4px;
-  font-size: 0.9rem;
+.amenity-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 5px;
 }
 
 .amenities-list {
-  padding-left: 18px;
-  margin: 0;
-  font-size: 0.83rem;
-  color: #666;
+    list-style: none;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
 }
 
-.amenities-list li {
-  margin-bottom: 2px;
+.amenities-list li::before {
+    content: "✔ ";
+    color: #00796B;
 }
 
-/* BOOK NOW BUTTON */
-.btn-wrapper {
-  display: flex;
-  justify-content: center; /* horizontally centered */
-  margin-top: 14px;
+/* The Book Now Button */
+.book-btn {
+    display: block;
+    text-align: center;
+    background: #c2af5c; /* Goldish color */
+    color: #000;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: auto; /* Pushes button to bottom of card */
 }
 
-button {
-  width: auto;
-  min-width: 140px;
-  background-color: rgb(187, 145, 116);
-  padding: 10px 32px;
-  border: none;
-  border-radius: 50px; /* makes it cylindrical / pill-shaped */
-  cursor: pointer;
-  transition: background-color 0.2s;
+.book-btn:hover {
+    background: #00796B;
+    color: #fff;
 }
 
-button:hover {
-  background-color: rgb(160, 120, 90);
+/* --- 8. RESPONSIVENESS (The Magic) --- */
+
+/* For Tablets (2 columns) */
+@media (max-width: 1024px) {
+    .listings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-button a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
+/* For Phones (1 column) */
+@media (max-width: 600px) {
+    .listings-grid {
+        grid-template-columns: 1fr;
+    }
+    .navig {
+        gap: 10px;
+    }
 }
 
-button a:hover {
-  color: #fff;
-}
+/* MAIN CONTENT WRAPPER */
 
 /*==========CONTACT US==========*/
 body {
