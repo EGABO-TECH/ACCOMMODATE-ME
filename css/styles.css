@@ -585,11 +585,11 @@ body {
 .hero-section1 {
     text-align: center;
     padding: 80px 20px;
-    color: white;
+    color: orange;
 }
 
 .section-title {
-    color: white;
+    color: #000000;
     margin: 40px 5% 20px;
     border-left: 5px solid #ffcc00; /* Gold accent line */
     padding-left: 15px;
