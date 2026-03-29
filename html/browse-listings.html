@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BROWSE LISTINGS</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css"/>
-    <link rel="icon" type="image/png" href="../Assets/logo.png"/>
+    <title>EXPLORE THE AVAILABLE SPACES</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-     <!--HEADER SECTION-->
+<body id="body">
+      <!--HEADER SECTION-->
     <header class="main-header">
       <div class="header-container">
         <div class="logo">
@@ -29,277 +28,326 @@
         </nav>
       </div>
     </header>
+    <nav class="nav-container">
+        <ul class="navig">
+            <li><a href="#body">All</a></li>
+            <li><a href="#hostels">Hostels</a></li>
+            <li><a href="#apartments">Apartments</a></li>
+            <li><a href="#rentals">Rentals</a></li>
+            <li><a href="#aibnb">AirBnB</a></li>
+            <li><a href="#single-rooms">Single Rooms</a></li>
+            <li><a href="#shared-rooms">Shared Rooms</a></li>
+            <li></li>
+            <li class="filter-item">
+                <select id="Filter">
+                    <option value="" disabled selected>Filter By</option>
+                    <option value="location">Location</option>
+                    <option value="price">Price</option>
+                    <option value="amenities">Range</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
 
-   <!-- Main content wrapper -->
-   <main class="page-content">
-       <h1 class="head">Your Perfect Home Awaits</h1>
-       <h2 class="sub-head">Browse Our Vetted Listings Today:</h2>
+    <header class="hero-section1">
+        <h1 class="head">Your Perfect Home Awaits</h1>
+        <p class="sub-head">Browse Our Vetted Listings Today</p>
+    </header>
 
-       <ul class="navig">
-           <li><a href="#">All</a></li>
-           <li><a href="#hostels">Hostels</a></li>
-           <li><a href="#apartments">Apartments</a></li>
-           <li><a href="#rentals">Rentals</a></li>
-           <li><a href="#">Air BnBs</a></li>
-           <li><a href="#">Shared Rooms</a></li>
-           <li><a href="#">Single Rooms</a></li>
-           <li>
-               <label for="filter">Filter</label>
-               <select id="filter" name="filter">
-                   <option value="location">Location</option>
-                   <option value="price">Price</option>
-                   <option value="range">Range</option>
-                   <option value="others">Others</option>
-               </select>
-           </li>
-       </ul>
+    <main class="main-content">
+        <h2 id="hostels" class="section-title">Modern Hostels</h2>
+        <div class="listings-grid">
+             <!--list1-->
+            <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/images.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">250K UGX/mo</div>
+                </div>
 
-       <!-- Row 1: Hostels -->
-       <h2 id="hostels">Modern Hostels:</h2>
-       <div class="listings-container">
+                <div class="content-container">
+                    <h3 class="property-title">Kabalgala Hostel</h3>
+                    <p class="property-description">the place has a conductive and very stable environment</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>clean water</li>
+                        <li>Security</li>
+                        <li>Power Backup</li>
+                    </ul>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter 1.jpeg" alt="Picture of Nassambya Hostel">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Nassambya Hostel</h3>
-                       <p class="property-price">400K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       It has the best environment, located in the heart of Kampala, with good security and it is very clean.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Free Wi-Fi</li>
-                           <li>24/7 Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Electricity</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--1 end-->
+            <!--list 2-->
+            <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/Shelter11.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">400K UGX/mo</div>
+                </div>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter 2.jpeg" alt="Picture of Kabalagala Hostel">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Kabalagala Hostel</h3>
-                       <p class="property-price">250K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       The place has a conducive and politically stable environment.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Free Wi-Fi</li>
-                           <li>24/7 Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Electricity</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                <div class="content-container">
+                    <h3 class="property-title">Nassambya Hostel</h3>
+                    <p class="property-description">Best environment in the heart of Kampala. Secure and very clean.</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>Free Wi-Fi</li>
+                        <li>24/7 Security</li>
+                        <li>Water & Power Backup</li>
+                    </ul>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter 3.jpeg" alt="Picture of Embassy Hostel">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Embassy Hostel</h3>
-                       <p class="property-price">300K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       It is located in the heart of Kampala with good security and a clean environment.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Free Wi-Fi</li>
-                           <li>24/7 Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Electricity</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--2 end-->
+            <!--list 3-->
+            <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/Shelter 1.jpeg" alt="Nassambya Hostel">
+                    <div class="price-badge">300K UGX/mo</div>
+                </div>
 
-       </div>
+                <div class="content-container">
+                    <h3 class="property-title">Embassy Hostel</h3>
+                    <p class="property-description">very close to campus, with good security and clean environment.</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>Cleaning services</li>
+                        <li>24/7 Security</li>
+                        <li>Water supply</li>
+                        <li>self-contained</li>
+                    </ul>
 
-       <!-- Row 2: Apartments -->
-       <h2 id="apartments">Serviced Apartments:</h2>
-       <div class="listings-container">
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--3 end-->
+            <!--list 4-->
+            <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/Shelter12.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">850K UGX/mo</div>
+                </div>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter 4.jpeg" alt="Picture of Kansanga 1 Apartments">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Kansanga 1 Apartments</h3>
-                       <p class="property-price">800K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       It is a clean, safe place for every student to live in.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Free Wi-Fi</li>
-                           <li>24/7 Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Electricity</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                <div class="content-container">
+                    <h3 class="property-title">Kansanga Hostel</h3>
+                    <p class="property-description">clean environment, secure, and only 1km away from campus</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li> Wi-Fi</li>
+                        <li>Security guards</li>
+                        <li>Water & Power Backup</li>
+                        <li>self-contained</li>
+                    </ul>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter 5.jpeg" alt="Picture of Kansanga 2 Apartments">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Kansanga 2 Apartments</h3>
-                       <p class="property-price">900K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       The best choice for students with families, very close to campus and the central division of Kampala.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Wi-Fi</li>
-                           <li>Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Ready Power Supply</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--4 end-->
+            </div>
+            <h2 id="apartments" class="section-title">Apartments</h2>
+        <div class="listings-grid">
+            <!--list 5-->
+             <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/Shelter10.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">700K UGX/mo</div>
+                </div>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Room.jpeg" alt="Picture of Kevina Apartments">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Kevina Apartments</h3>
-                       <p class="property-price">1M UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       The apartments are very quiet, secure and near campus.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Free Wi-Fi</li>
-                           <li>24/7 Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Electricity</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                <div class="content-container">
+                    <h3 class="property-title">Ggaba Apartments</h3>
+                    <p class="property-description"></p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>Water supply</li>
+                        <li>Security guards</li>
+                        <li>Water</li>
+                        <li>Power Backup</li>
+                    </ul>
 
-       </div>
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--5 end-->
+            <!--list 6-->
+             <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/Shelter8.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">1M UGX/mo</div>
+                </div>
 
-       <!-- Row 3: Rentals -->
-       <h2 id="rentals">Commercial Rentals:</h2>
-       <div class="listings-container">
+                <div class="content-container">
+                    <h3 class="property-title">Kevina Apartments</h3>
+                    <p class="property-description">super quite, secure near to CUU main campus</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>Free fast internet</li>
+                        <li>Security guards</li>
+                        <li>Power Backup</li>
+                        <li>water</li>
+                    </ul>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter.jpeg" alt="Picture of KG Malls">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">KG Malls</h3>
-                       <p class="property-price">700K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       A shop for rent near campus, located inside a busy mall, suitable for a boutique, salon, stationery shop, or small business. Secure location with high customer traffic and easy access.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Reliable electricity</li>
-                           <li>Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Clean environment</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--6 ends-->
+            <!--the 7th card-->
+            <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/Shelter 2.jpeg" alt="Nassambya Hostel">
+                    <div class="price-badge">1500,000 UGX/mo</div>
+                </div>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter 1.jpeg" alt="Picture of Ggaba Shop">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Ggaba Shop</h3>
-                       <p class="property-price">400K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       Shop for rent near campus, located along a busy roadside close to student residences.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Free Wi-Fi</li>
-                           <li>24/7 Security</li>
-                           <li>Parking</li>
-                           <li>Electricity</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                <div class="content-container">
+                    <h3 class="property-title">Kigs Apartments</h3>
+                    <p class="property-description">best option for shared accomodation, it includes all students need</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>Free fast internet</li>
+                        <li>Security guards</li>
+                        <li>Power Backup</li>
+                        <li>Reading area</li>
+                        <li>Resturant</li>
+                        <li>water</li>
+                    </ul>
 
-           <div class="property-card">
-               <div class="image-placeholder">
-                   <img src="../Assets/Shelter 2.jpeg" alt="Picture of Nassambya Shops">
-               </div>
-               <div class="content-container">
-                   <div class="title-price-group">
-                       <h3 class="property-title">Nassambya Shops</h3>
-                       <p class="property-price">500K UGX/month</p>
-                   </div>
-                   <p class="property-description">
-                       Shop for rent near main campus, in a strategic area with high student movement.
-                       <h4 class="AM">Amenities</h4>
-                       <ul class="amenities-list">
-                           <li>Secure surroundings</li>
-                           <li>24/7 Security</li>
-                           <li>Clean Water Supply</li>
-                           <li>Electricity</li>
-                       </ul>
-                   </p>
-                   <div class="btn-wrapper">
-                       <button><a href="https://wa.me/+256768043407" target="_blank">Book Now</a></button>
-                   </div>
-               </div>
-           </div>
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--7th end-->
+            <!--8th card-->
+            <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/Shelter9.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">870K UGX/mo</div>
+                </div>
 
-       </div>
+                <div class="content-container">
+                    <h3 class="property-title">Rock Apartments</h3>
+                    <p class="property-description">secure, quite, affordable, and near to CUU main campus</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>Water</li>
+                        <li>Security guards</li>
+                        <li>cleaning</li>
+                        <li>shared WI-FI</li>
+                        <li>library</li>
+                    </ul>
 
-   </main>
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!--8 end-->
+        </div>
+        <h2 id="hostels" class="section-title">Rentals</h2>
+        <div class="listings-grid">
+            <!--rentals crd 9-->
+             <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/shop3.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">600K UGX/mo</div>
+                </div>
 
-   <!--FOOTER SECTION-->
+                <div class="content-container">
+                    <h3 class="property-title">Arena Mall</h3>
+                    <p class="property-description">a big shop inside KG Mall, suitable for bourique, salon, staionery shop,
+                        secure location with high customer traffic.
+                    </p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>reliable electricity</li>
+                        <li>Security guards</li>
+                        <li>cleaen environment</li>
+                        <li>easy access</li>
+                        <li>clean water supply</li>
+                    </ul>
+
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!-- 9 end-->
+             <!--the card 10-->
+              <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/shop1.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">500K UGX/mo</div>
+                </div>
+
+                <div class="content-container">
+                    <h3 class="property-title">Ggaba road shop</h3>
+                    <p class="property-description">shop for rent near to campus, along the busy Ggaba roadside
+                        and close to student residences.
+                    </p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>parking area</li>
+                        <li>Security guards</li>
+                        <li>electricity backup</li>
+                        <li>WI-FI</li>
+                    </ul>
+
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+             <!--end of cod 10-->
+             <!--card no 11-->
+              <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/shop2.jpg" alt="a shop image">
+                    <div class="price-badge">470K UGX/mo</div>
+                </div>
+
+                <div class="content-container">
+                    <h3 class="property-title">Kablagala shop</h3>
+                    <p class="property-description">shop for rent near to main campus, in a strategic area with high students movement</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>Water</li>
+                        <li>Secure surroundings</li>
+                        <li>electricity</li>
+                        <li>shared WI-FI</li>
+                    </ul>
+
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+             <!--11 end-->
+             <!--CARD 12-->
+              <div class="property-card">
+                <div class="image-box">
+                    <img src="../assets/shop4.jpg" alt="Nassambya Hostel">
+                    <div class="price-badge">870K UGX/mo</div>
+                </div>
+
+                <div class="content-container">
+                    <h3 class="property-title">KG mall</h3>
+                    <p class="property-description">a big shop space for rent, easy access area with high customer traffic</p>
+                    
+                    <h4 class="amenity-label">Amenities</h4>
+                    <ul class="amenities-list">
+                        <li>parking</li>
+                        <li>Security guards</li>
+                        <li>water</li>
+                        <li>shelfs</li>
+                    </ul>
+
+                    <a href="https://wa.me/+256768043407" target="_blank" class="book-btn">Book Now</a>
+                </div>
+            </div>
+             <!--12 End-->
+        </div>
+    </main>
+        <!--FOOTER SECTION-->
    <footer class="footer">
       <div class="footer-container">
         <div class="footer-brand">
