@@ -241,13 +241,7 @@
   overflow: hidden;
 }
 
-.ticker {
-  display: flex;
-  gap: 2rem;
-  animation: ticker 22s linear infinite;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
+
 
 .ticker span {
   font-family: var(--ff-ui);
