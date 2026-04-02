@@ -931,10 +931,7 @@ form button:hover {
   margin-top: 20px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .full-width {
   margin-bottom: 20px;
