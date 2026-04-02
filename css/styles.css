@@ -314,6 +314,30 @@
   background: rgba(255, 255, 255, 0.15);
   border-color: #fff;
 }
+/*========== MOBILE NAVIGATION FIX ==========*/
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;          /* allows wrapping */
+    justify-content: center;
+    gap: 12px;
+    white-space: normal;      /* removes nowrap restriction */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .btn-list {
+    padding: 8px 16px;
+  }
+}
 
 /*==========ABOUT US==========*/
 .about-us {
