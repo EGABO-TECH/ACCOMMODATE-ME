@@ -16,7 +16,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
   top: 0;
   z-index: 1000;
-  position: absolute;
+  position: absol
   margin-top: 0;
 }
 
@@ -559,7 +559,7 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
+  position: sticky;
 }
 
 .navig {
