@@ -234,12 +234,8 @@
   padding: 1rem 0;
   overflow: hidden;
 }
+/* the eddited text*/
 
-.ticker-wrap {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-}
 
 .ticker {
   display: flex;
