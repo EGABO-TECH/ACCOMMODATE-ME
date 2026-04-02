@@ -716,14 +716,14 @@ body {
 /* For Tablets (2 columns) */
 @media (max-width: 1024px) {
     .listings-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* For Phones (1 column) */
 @media (max-width: 600px) {
     .listings-grid {
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
     }
     .navig {
         gap: 10px;
