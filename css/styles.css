@@ -860,7 +860,10 @@ form button:hover {
 }
 
 /* Responsive Adjustments */
-
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
 
   .contact-sidebar {
     border-radius: 0;
