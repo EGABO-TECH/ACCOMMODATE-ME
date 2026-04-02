@@ -235,11 +235,7 @@
   overflow: hidden;
 }
 
-.ticker-wrap {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-}
+
 
 .ticker {
   display: flex;
