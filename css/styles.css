@@ -868,7 +868,6 @@ form button:hover {
 }
 
 .listing-section {
-  background-color: var(--bg-soft);
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
 }
