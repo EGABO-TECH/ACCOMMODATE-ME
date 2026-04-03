@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../Assets/logo.png" width="300" alt="Accommodate Me Logo">
+  <img src="Assets/logo.png" width="300" alt="Accommodate Me Logo">
 </p>
 
 # Accommodate Me: Student Housing Initiative
