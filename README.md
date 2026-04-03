@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../Assets/logo.png" width="300" alt="Accommodate Me Logo">
+</p>
+
 # Accommodate Me: Student Housing Initiative
 
 > "Focus on your future, we'll handle the rental hustle."
