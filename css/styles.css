@@ -950,7 +950,75 @@ textarea:focus {
   outline: none;
   background-color: #fff;
 }
+/* add image upload styling */
 
+/* Container styling */
+.upload-box {
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Create the custom "Button" area */
+.custom-file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  padding: 40px;
+  cursor: pointer;
+  background-color: #f8fbff;
+  transition: background 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #eef5ff;
+}
+
+.upload-content {
+  text-align: center;
+}
+
+.icon {
+  font-size: 32px;
+  display: block;
+}
+
+.text {
+  display: block;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Submit button styling */
+.submit-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+/*======= final submit button =======*/
 .submit-btn {
   background-color: #cc825a;
   width: 100%;
