@@ -1155,3 +1155,114 @@ input[type="file"] {
 .bottom-socials a:hover {
   color: #fff;
 }
+
+/* DARK MODE STYLES */
+body:has(.dark-mode-checkbox:checked) {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body:has(.dark-mode-checkbox:checked) .main-header,
+body:has(.dark-mode-checkbox:checked) .about-us,
+body:has(.dark-mode-checkbox:checked) .pillars-section,
+body:has(.dark-mode-checkbox:checked) .contact-container,
+body:has(.dark-mode-checkbox:checked) .form-container,
+body:has(.dark-mode-checkbox:checked) .pillar-card,
+body:has(.dark-mode-checkbox:checked) .property-card,
+body:has(.dark-mode-checkbox:checked) form input,
+body:has(.dark-mode-checkbox:checked) form select,
+body:has(.dark-mode-checkbox:checked) form textarea,
+body:has(.dark-mode-checkbox:checked) .contact-sidebar {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+body:has(.dark-mode-checkbox:checked) .main-header {
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body:has(.dark-mode-checkbox:checked) .nav-links a,
+body:has(.dark-mode-checkbox:checked) .navig a {
+  color: #e0e0e0;
+}
+
+body:has(.dark-mode-checkbox:checked) .logo h1,
+body:has(.dark-mode-checkbox:checked) .title,
+body:has(.dark-mode-checkbox:checked) .main-title,
+body:has(.dark-mode-checkbox:checked) .pillar-card h3,
+body:has(.dark-mode-checkbox:checked) .property-title,
+body:has(.dark-mode-checkbox:checked) .contact-form h1,
+body:has(.dark-mode-checkbox:checked) .form-header h2 {
+  color: #fff;
+}
+
+body:has(.dark-mode-checkbox:checked) .text-content p,
+body:has(.dark-mode-checkbox:checked) .pillar-card p,
+body:has(.dark-mode-checkbox:checked) .property-description,
+body:has(.dark-mode-checkbox:checked) .contact-form p,
+body:has(.dark-mode-checkbox:checked) .form-header p {
+  color: #b0b0b0;
+}
+
+body:has(.dark-mode-checkbox:checked) .mission-banner {
+  background: #112211;
+}
+
+body:has(.dark-mode-checkbox:checked) .icon-wrapper {
+  background-color: #2c2c2c;
+  color: #8fba98;
+}
+
+body:has(.dark-mode-checkbox:checked) .support-badge {
+  background-color: #8c5d41;
+}
+
+/* Dark Mode Toggle Button Setup */
+.dark-mode-checkbox {
+  display: none;
+}
+.dark-mode-label {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: #1a2b23;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.dark-mode-label:hover {
+  transform: scale(1.1);
+}
+.dark-mode-label svg {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  transition: all 0.4s ease;
+  fill: #f6920f;
+}
+.dark-mode-label .sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+.dark-mode-label .moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+.dark-mode-checkbox:checked ~ .dark-mode-label {
+  background: #fff;
+}
+.dark-mode-checkbox:checked ~ .dark-mode-label .sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+.dark-mode-checkbox:checked ~ .dark-mode-label .moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
