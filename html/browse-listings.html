@@ -47,10 +47,11 @@
             <li></li>
             <li class="filter-item">
                 <select id="Filter">
-                    <option value="" disabled selected>Filter By</option>
-                    <option value="location">Location</option>
-                    <option value="price">Price Range</option>
-                    <option value="amenities">Amenities</option>
+                    <option value="all" selected>All Campuses</option>
+                    <option value="campus-main">Main Campus (Nsambya)</option>
+                    <option value="campus-law">Law Faculty (Bukoto)</option>
+                    <option value="campus-kingsgate">Kingsgate Campus</option>
+                    <option value="campus-mukono">Mukono Campus</option>
                 </select>
             </li>
         </ul>
@@ -631,5 +632,83 @@
         </div>
       </div>
    </footer>
+    <!-- Filter Logic Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterSelect = document.getElementById("Filter");
+            const gridContainers = document.querySelectorAll(".listings-grid");
+            
+            // Extract and store data for each property grid
+            const gridsData = Array.from(gridContainers).map(grid => {
+                const sectionTitle = grid.previousElementSibling; // The <h2> above the grid
+                const cards = Array.from(grid.querySelectorAll(".property-card"));
+                
+                const parsedCards = cards.map(card => {
+                    const titleText = card.querySelector(".property-title").textContent.toLowerCase();
+                    const descText = card.querySelector(".property-description").textContent.toLowerCase();
+                    const fullText = titleText + " " + descText;
+                    
+                    return { element: card, text: fullText };
+                });
+                
+                return { container: grid, title: sectionTitle, cards: parsedCards };
+            });
+
+            filterSelect.addEventListener("change", (e) => {
+                const filterValue = e.target.value;
+                
+                gridsData.forEach(gridData => {
+                    const { container, title, cards } = gridData;
+                    
+                    // Remove all cards temporarily
+                    container.innerHTML = "";
+                    
+                    // Create a copy of the cards to filter
+                    let displayCards = [...cards];
+                    
+                    // Apply filtering logic based on campuses
+                    if (filterValue === "campus-main") {
+                        displayCards = displayCards.filter(c => 
+                            c.text.includes("nsambya") || c.text.includes("kabalagala") || 
+                            c.text.includes("kansanga") || c.text.includes("ggaba") || 
+                            c.text.includes("main campus") || c.text.includes("kevina") || 
+                            c.text.includes("aryan") || c.text.includes("muhika") || 
+                            c.text.includes("city center") || c.text.includes("arena") || 
+                            c.text.includes("rock") || c.text.includes("embassy") ||
+                            (c.text.includes("campus") && !c.text.includes("bukoto") && !c.text.includes("law") && !c.text.includes("kingsgate"))
+                        );
+                    } else if (filterValue === "campus-law") {
+                        displayCards = displayCards.filter(c => 
+                            c.text.includes("bukoto") || c.text.includes("acacia") || 
+                            c.text.includes("kamwokya") || c.text.includes("law")
+                        );
+                    } else if (filterValue === "campus-kingsgate") {
+                        displayCards = displayCards.filter(c => 
+                            c.text.includes("kingsgate") || c.text.includes("kg mall") || 
+                            c.text.includes("kigs")
+                        );
+                    } else if (filterValue === "campus-mukono") {
+                        displayCards = displayCards.filter(c => 
+                            c.text.includes("mukono")
+                        );
+                    }
+                    
+                    // Re-append the filtered cards
+                    displayCards.forEach(c => {
+                        container.appendChild(c.element);
+                    });
+
+                    // Hide the section title if no properties match the filter in this category
+                    if (displayCards.length === 0) {
+                        title.style.display = "none";
+                        container.style.display = "none";
+                    } else {
+                        title.style.display = "block";
+                        container.style.display = "grid";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
