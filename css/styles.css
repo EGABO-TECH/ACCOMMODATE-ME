@@ -108,12 +108,10 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(28, 45, 28, 0.72) 0%,
-    rgba(44, 74, 46, 0.45) 60%,
-    rgba(92, 61, 46, 0.3) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(28, 45, 28, 0.72) 0%,
+      rgba(44, 74, 46, 0.45) 60%,
+      rgba(92, 61, 46, 0.3) 100%);
 }
 
 .hero-content {
@@ -173,6 +171,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -183,6 +182,10 @@
   position: absolute;
   bottom: 2.5rem;
   right: 2.5rem;
+}
+
+
+.hero-scroll-hint {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,6 +225,7 @@
   0% {
     top: -100%;
   }
+
   100% {
     top: 200%;
   }
@@ -260,6 +264,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -339,9 +344,11 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
 .hamburger.active .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
+
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
@@ -350,12 +357,14 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
 
 /* Tablet & Smaller Desktop */
 @media (max-width: 992px) {
+
   /* About Us */
   .container {
     flex-direction: column;
     gap: 40px;
     padding: 0 20px;
   }
+
   .image-grid {
     width: 100%;
     max-width: 500px;
@@ -366,15 +375,19 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
     align-items: center;
     position: relative;
   }
-  .main-image, .sub-image {
+
+  .main-image,
+  .sub-image {
     position: static;
     width: 100%;
     margin-bottom: 20px;
   }
+
   .image-wrapper img {
     width: 100%;
     height: auto;
   }
+
   .support-badge {
     position: relative;
     top: auto;
@@ -384,23 +397,28 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
     margin-bottom: 20px;
     z-index: 3;
   }
+
   /* Contact Us */
   .contact-container {
     flex-direction: column;
     margin: 20px;
   }
+
   .contact-sidebar {
     border-radius: 0 0 40px 40px;
   }
+
   /* Footer */
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .footer-brand {
     margin-bottom: 30px;
   }
+
   .logo-group {
     justify-content: center;
   }
@@ -408,13 +426,16 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
 
 /* Mobile Devices */
 @media (max-width: 768px) {
+
   /* Header & Navigation */
   .header-container {
     padding: 0 20px;
   }
+
   .hamburger {
     display: flex;
   }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -428,10 +449,10 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
     align-items: center;
     transition: right 0.4s ease;
     z-index: 1000;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     gap: 30px;
   }
-  
+
   body:has(.dark-mode-checkbox:checked) .nav-links {
     background-color: #1e1e1e;
   }
@@ -444,19 +465,22 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
   .hero-content {
     padding: 5rem 2rem 2rem 5%;
   }
+
   .hero-title {
     font-size: clamp(2.5rem, 8vw, 3.5rem);
   }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
   }
+
   .hero-actions a {
     width: 100%;
     text-align: center;
     justify-content: center;
   }
-  
+
   /* Pillars Section */
   .pillars-section {
     padding: 50px 20px;
@@ -466,6 +490,7 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
   .form-container {
     padding: 20px;
   }
+
   .input-grid {
     grid-template-columns: 1fr;
   }
@@ -474,11 +499,12 @@ body:has(.dark-mode-checkbox:checked) .hamburger .bar {
   .navig {
     gap: 15px;
   }
-  
+
   /* Contact Form */
   .contact-form {
     padding: 30px 20px;
   }
+
   .contact-sidebar {
     padding: 40px 20px;
   }
@@ -863,6 +889,7 @@ body {
   .listings-grid {
     grid-template-columns: 1fr;
   }
+
   .navig {
     gap: 10px;
   }
@@ -897,6 +924,25 @@ body {
 .contact-form {
   flex: 1.2;
   padding: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.contact-us-form textarea {
+  flex: 1 1 auto;
+  resize: none;
+  min-height: 120px;
+  margin-bottom: 20px !important;
+}
+
+.contact-us-form button[type="submit"] {
+  margin-top: auto;
 }
 
 .contact-form h1 {
@@ -930,6 +976,19 @@ form textarea {
   background-color: #fff;
   font-size: 1rem;
   color: #333;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 form button {
@@ -991,6 +1050,77 @@ form button:hover {
   width: 100%;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+/* Map wrapper: needed for pin overlay positioning */
+.map-wrapper {
+  position: relative;
+  margin-top: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Pin overlay: sits on top of the iframe */
+.map-pin-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  pointer-events: none;
+  z-index: 10;
+  animation: pin-bounce 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes pin-bounce {
+  from {
+    transform: translate(-50%, -100%);
+  }
+
+  to {
+    transform: translate(-50%, -114%);
+  }
+}
+
+/* Classic Google Maps red teardrop */
+.map-pin-teardrop {
+  width: 30px;
+  height: 44px;
+  background: #ea4335;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.map-pin-inner {
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* White callout bubble label */
+.map-pin-callout {
+  background: #fff;
+  color: #222;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  line-height: 1.4;
+  max-width: 130px;
+  white-space: normal;
+  text-align: left;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 768px) {
@@ -1094,6 +1224,7 @@ textarea:focus {
   outline: none;
   background-color: #fff;
 }
+
 /* add image upload styling */
 
 /* Container styling */
@@ -1162,6 +1293,7 @@ input[type="file"] {
 .submit-btn:hover {
   background-color: #218838;
 }
+
 /*======= final submit button =======*/
 .submit-btn {
   background-color: #cc825a;
@@ -1305,6 +1437,7 @@ body:has(.dark-mode-checkbox:checked) {
   background-color: #121212;
   color: #e0e0e0;
 }
+
 body:has(.dark-mode-checkbox:checked) .main-header,
 body:has(.dark-mode-checkbox:checked) .about-us,
 body:has(.dark-mode-checkbox:checked) .pillars-section,
@@ -1365,6 +1498,7 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
 .dark-mode-checkbox {
   display: none;
 }
+
 .dark-mode-label {
   position: fixed;
   bottom: 30px;
@@ -1378,12 +1512,14 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   justify-content: center;
   align-items: center;
   z-index: 10000;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
+
 .dark-mode-label:hover {
   transform: scale(1.1);
 }
+
 .dark-mode-label svg {
   width: 26px;
   height: 26px;
@@ -1391,15 +1527,18 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   transition: all 0.4s ease;
   fill: #f6920f;
 }
+
 .dark-mode-label .sun {
   opacity: 0;
   transform: rotate(90deg) scale(0);
 }
+
 .dark-mode-label .moon {
   opacity: 1;
   transform: rotate(0) scale(1);
 }
-.dark-mode-checkbox:checked ~ .dark-mode-label {
+
+.dark-mode-checkbox:checked~.dark-mode-label {
   background: #fff;
   display: flex;
   align-items: center;
@@ -1500,6 +1639,7 @@ body:has(.dark-mode-checkbox:checked) {
   background-color: #121212;
   color: #e0e0e0;
 }
+
 body:has(.dark-mode-checkbox:checked) .main-header,
 body:has(.dark-mode-checkbox:checked) .about-us,
 body:has(.dark-mode-checkbox:checked) .pillars-section,
@@ -1560,6 +1700,7 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
 .dark-mode-checkbox {
   display: none;
 }
+
 .dark-mode-label {
   position: fixed;
   bottom: 30px;
@@ -1573,12 +1714,14 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   justify-content: center;
   align-items: center;
   z-index: 10000;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
+
 .dark-mode-label:hover {
   transform: scale(1.1);
 }
+
 .dark-mode-label svg {
   width: 26px;
   height: 26px;
@@ -1586,22 +1729,27 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   transition: all 0.4s ease;
   fill: #f6920f;
 }
+
 .dark-mode-label .sun {
   opacity: 0;
   transform: rotate(90deg) scale(0);
 }
+
 .dark-mode-label .moon {
   opacity: 1;
   transform: rotate(0) scale(1);
 }
-.dark-mode-checkbox:checked ~ .dark-mode-label {
+
+.dark-mode-checkbox:checked~.dark-mode-label {
   background: #fff;
 }
-.dark-mode-checkbox:checked ~ .dark-mode-label .sun {
+
+.dark-mode-checkbox:checked~.dark-mode-label .sun {
   opacity: 1;
   transform: rotate(0) scale(1);
 }
-.dark-mode-checkbox:checked ~ .dark-mode-label .moon {
+
+.dark-mode-checkbox:checked~.dark-mode-label .moon {
   opacity: 0;
   transform: rotate(-90deg) scale(0);
 }
@@ -1621,6 +1769,7 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   align-items: flex-start;
   gap: 10px;
 }
+
 .footer-col.contact-info ul li i {
   color: #d48e5e;
   margin-top: 4px;
@@ -1632,6 +1781,7 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   margin-top: 15px;
   align-items: stretch;
 }
+
 .newsletter-form input {
   flex: 1;
   min-width: 150px;
@@ -1643,6 +1793,7 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   box-sizing: border-box;
   height: 45px;
 }
+
 .newsletter-form button {
   padding: 0 25px;
   border-radius: 0 30px 30px 0;
@@ -1658,6 +1809,7 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
   align-items: center;
   justify-content: center;
 }
+
 .newsletter-form button:hover {
   background: #b56e48;
 }
@@ -1691,12 +1843,15 @@ body:has(.dark-mode-checkbox:checked) .support-badge {
     text-align: left !important;
     gap: 30px !important;
   }
+
   .footer-brand {
     margin-bottom: 10px;
   }
+
   .logo-group {
     justify-content: flex-start;
   }
+
   .bottom-content {
     flex-direction: column;
     align-items: center;
