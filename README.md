@@ -21,7 +21,7 @@ We focus on four key areas to help students thrive:
 * **Academic Success:** We believe a stable home environment fosters better mental well-being and higher grades.
 
 ### Built With
-* **Frontend:** HTML5 and CSS3
+* **Frontend:** HTML5, CSS3 and JavaScript
 
 ### The Team
 This project was ideated by **The Rule of 15**:
